@@ -1,43 +1,43 @@
 {
   "author": {
     "name": "Mark Lozeman",
-    "bio": "Software Developer. Gefocust op schone PHP-code, DevOps met Vercel en professionele documentatie."
+    "bio": "Software Developer in opleiding. Gefocust op moderne werkmethodes, PHP en cloud-technologie."
   },
   "articles": [
     {
       "id": 1,
       "slug": "context-publiceren",
-      "title": "Context: De weg naar het internet",
+      "title": "De weg naar het internet",
       "category": "Theorie",
-      "content": "Het publiceren van een website is tegenwoordig meer dan een bestand uploaden. Het draait om de 'Gouden Driehoek':\n\n1. **Domeinnaam (DNS):** Het adres dat verwijst naar een IP.\n2. **Hosting (Serverless):** Vercel schaalt automatisch en is razendsnel.\n3. **SSL-Beveiliging:** Essentieel voor HTTPS en veiligheid."
+      "content": "Het publiceren van een website is meer dan een bestand uploaden. Het draait om de 'Gouden Driehoek':\n\n1. **Domeinnaam (DNS):** Je digitale adres.\n2. **Hosting (Serverless):** De ruimte op de server (Vercel).\n3. **SSL-Beveiliging:** Veiligheid via HTTPS."
     },
     {
       "id": 2,
       "slug": "ontwikkeling-proces",
-      "title": "Ontwikkeling: Van Klant naar Code",
+      "title": "Van Aanvraag naar Code",
       "category": "Proces",
-      "content": "Het proces volgt de SDLC (Software Development Life Cycle):\n* **Analyse:** Wat is het doel?\n* **Design:** UI/UX ontwerpen in tools zoals Figma.\n* **Realisatie:** Bouwen met PHP en Bootstrap.\n* **Deployment:** Live zetten via een automatische CI/CD-pijplijn."
+      "content": "Het proces volgt de SDLC (Software Development Life Cycle):\n* **Analyse:** Wat is het doel?\n* **Ontwerp:** UI/UX designs maken.\n* **Realisatie:** Bouwen met PHP en Bootstrap.\n* **Livegang:** Automatische publicatie via GitHub."
     },
     {
       "id": 3,
       "slug": "mogelijkheden-keuzes",
-      "title": "CMS, Builders of Eigen Code?",
+      "title": "CMS of Eigen Code?",
       "category": "Techniek",
-      "content": "1. **CMS:** Zoals WordPress. Makkelijk, maar zwaar.\n2. **Builders:** Zoals Wix. Snel, maar technisch beperkt.\n3. **Custom Code (PHP):** Zoals deze site. Maximale controle en snelheid."
+      "content": "Er zijn drie smaken:\n1. **CMS:** WordPress (Makkelijk maar zwaar).\n2. **Builders:** Wix (Snel maar beperkt).\n3. **Eigen Code:** PHP (Maximale controle en snelheid)."
     },
     {
       "id": 4,
       "slug": "troubleshooting-log",
-      "title": "Troubleshooting: Debugging Logboek",
+      "title": "Logboek: Problemen Oplossen",
       "category": "Praktijk",
-      "content": "Tijdens de bouw overwonnen:\n* **Configuratie-fout:** vercel.json bevatte data in plaats van instellingen.\n* **Runtime Error:** De PHP-builder versie was offline. Opgelost door versie 0.7.2 te forceren.\n* **Node.js EOL:** Vercel weigerde oude Node-versies. Opgelost door de omgeving te moderniseren."
+      "content": "Tijdens de bouw overwonnen:\n* **Configuratie-fout:** vercel.json hersteld.\n* **Versie-fout:** De PHP-runtime geforceerd naar 0.7.2.\n* **Node.js update:** De omgeving gemoderniseerd voor Vercel."
     },
     {
-  "id": 5,
-  "slug": "vibe-coding",
-  "title": "Vibe Coding: De Nieuwe Revolutie",
-  "category": "Trend",
-  "content": "Wat is Vibe Coding? Het is een nieuwe manier van programmeren waarbij de developer zich focust op de 'vibe' (het concept, de flow en de user experience) terwijl AI-tools de complexe syntax en boilerplate code afhandelen.\n\n**Hoe is dit toegepast op deze blog?**\nDit project is een puur voorbeeld van Vibe Coding. In plaats van urenlang handmatig te debuggen op server-instellingen, hebben we via natuurlijke taal gecommuniceerd over de gewenste output. De AI fungeerde als de 'junior developer' die de code schreef, terwijl jij als 'lead developer' de architectuur bewaakte, de foutmeldingen analyseerde en de richting bepaalde.\n\nHet resultaat? Een snelle realisatie van een complex CI/CD-systeem zonder vast te lopen in syntax-details, maar met volledige controle over het eindproduct."
-}
+      "id": 5,
+      "slug": "vibe-coding",
+      "title": "Vibe Coding: De Nieuwe Revolutie",
+      "category": "Trend",
+      "content": "Vibe Coding is programmeren op basis van concept en 'vibe', waarbij AI de zware syntax overneemt. \n\n**Toepassing op deze blog:**\nDit project is een puur voorbeeld van Vibe Coding. Wij bepaalden de richting en de architectuur, terwijl de AI hielp bij het razendsnel oplossen van complexe server-errors. Het resultaat is een professionele site zonder urenlang handmatig typewerk."
+    }
   ]
 }
