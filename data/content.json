@@ -2,9 +2,9 @@
   "author": {
     "name": "Mark Lozeman",
     "bio": "Software Developer in opleiding. Een gedreven 'Vibe Coder' met passie voor PHP, Bootstrap 5 en geautomatiseerde cloud-workflows via Vercel.",
-    "avatar_name": "Jouw+Naam", 
-    "github_url": "https://github.com/mlozeman-creator/mijn-website-projectv5",
-    "email": "mark.lozeman@windesheim..nl"
+    "avatar_name": "Mark+Lozeman", 
+    "github_url": "https://github.com/mlozeman-creator/mijn-website-project",
+    "email": "m.lozeman@student.roc.nl"
   },
   "articles": [
     {
@@ -45,7 +45,7 @@
       "title": "Vibe Coding: De Nieuwe Revolutie",
       "category": "Trend",
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600",
-      "content": "Vibe Coding is programmeren op basis van concept en 'vibe', waarbij AI de syntax overneemt.\n\n**Toepassing op deze blog:**\nDit project is een puur voorbeeld van Vibe Coding. Wij bepaalden de architectuur en de richting, terwijl de AI hielp bij het razendsnel oplossen van complexe server-errors. Dit laat zien dat een developer tegenwoordig meer een 'architect' is dan een 'typer'."
+      "content": "Vibe Coding is programmeren op basis van concept en 'vibe', waarbij AI de syntax overneemt.\n\n**Toepassing op deze blog:**\nDit project is een puur voorbeeld van Vibe Coding. Wij bepaalden de architectuur en de richting, terwijl de AI hielp bij het razendsnel oplossen van complexe server-errors."
     }
   ]
 }
