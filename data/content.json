@@ -1,10 +1,10 @@
 {
   "author": {
     "name": "Mark Lozeman",
-    "bio": "Software Developer in opleiding. Een gedreven 'Vibe Coder' met passie voor PHP, Bootstrap 5 en geautomatiseerde cloud-workflows via Vercel.",
+    "bio": "MBO-4 Software Developer in opleiding. Een gedreven 'Vibe Coder' met passie voor PHP, Bootstrap 5 en geautomatiseerde cloud-workflows via Vercel.",
     "avatar_name": "Mark+Lozeman", 
-    "github_url": "https://github.com/mlozeman-creator/mijn-website-project",
-    "email": "m.lozeman@student.roc.nl"
+    "github_url": "https://github.com/mlozeman-creator/mijn-website-projectv5",
+    "email": "mark.lozeman@windesheim.nl"
   },
   "articles": [
     {
@@ -13,7 +13,7 @@
       "title": "De weg naar het internet",
       "category": "Theorie",
       "image": "https://images.unsplash.com/photo-1558655146-d09347e92766?w=600",
-      "content": "Het publiceren van een website is meer dan een bestand uploaden naar een server. Het draait om de 'Gouden Driehoek' die je site bereikbaar maakt:\n\n1. **Domeinnaam (DNS):** Dit is het digitale adres (bijv. .nl). DNS vertaalt namen naar technische IP-adressen.\n2. **Hosting (Serverless):** We gebruiken Vercel. De servers staan in de 'cloud' en schalen automatisch mee.\n3. **SSL-Beveiliging:** Zorgt voor de HTTPS-verbinding. Cruciaal voor veiligheid en privacy."
+      "content": "Het publiceren van een website is meer dan een bestand uploaden. Het draait om de 'Gouden Driehoek': Domeinnaam (DNS), Hosting (Vercel) en SSL-beveiliging."
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "title": "Van Aanvraag naar Code",
       "category": "Proces",
       "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600",
-      "content": "Het ontwikkelproces volgt de SDLC (Software Development Life Cycle):\n\n* **Analyse:** Wat is het doel van de site?\n* **Ontwerp (UI/UX):** Het maken van visuele ontwerpen in tools zoals Figma.\n* **Realisatie:** Het bouwen met PHP en Bootstrap 5.\n* **Livegang:** De publicatie via een geautomatiseerde CI/CD-pijplijn via GitHub."
+      "content": "Ontwikkeling volgt de SDLC: van analyse en UI/UX ontwerp naar realisatie in PHP en uiteindelijke deployment."
     },
     {
       "id": 3,
@@ -29,7 +29,7 @@
       "title": "CMS of Eigen Code?",
       "category": "Techniek",
       "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600",
-      "content": "Er zijn drie hoofdsmaken voor website-ontwikkeling:\n\n1. **CMS:** Zoals WordPress. Makkelijk voor de gebruiker, maar vaak zwaar en traag.\n2. **Website Builders:** Zoals Wix. Snel klaar, maar technisch weinig controle.\n3. **Eigen Code:** PHP of React. Maximale controle, uniek design en optimale snelheid."
+      "content": "Kies je voor de vrijheid van eigen code (PHP), de snelheid van een builder (Wix) of het gemak van een CMS (WordPress)?"
     },
     {
       "id": 4,
@@ -37,15 +37,15 @@
       "title": "Logboek: Problemen Oplossen",
       "category": "Praktijk",
       "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600",
-      "content": "Tijdens de bouw overwonnen:\n\n* **Configuratie-fout:** De vercel.json hersteld door data en instructies te scheiden.\n* **Versie-fout:** De PHP-runtime geforceerd naar 0.7.2.\n* **Node.js update:** De omgeving gemoderniseerd voor een geslaagde build op Vercel."
+      "content": "Tijdens dit project zijn runtime-errors en Node.js versie-conflicten opgelost door de vercel.json configuratie te optimaliseren."
     },
     {
       "id": 5,
       "slug": "vibe-coding",
-      "title": "Vibe Coding: De Nieuwe Revolutie",
+      "title": "Vibe Coding: De Revolutie",
       "category": "Trend",
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600",
-      "content": "Vibe Coding is programmeren op basis van concept en 'vibe', waarbij AI de syntax overneemt.\n\n**Toepassing op deze blog:**\nDit project is een puur voorbeeld van Vibe Coding. Wij bepaalden de architectuur en de richting, terwijl de AI hielp bij het razendsnel oplossen van complexe server-errors."
+      "content": "Vibe Coding laat AI de syntax doen terwijl de developer de architectuur bewaakt. Dit project is daar het bewijs van."
     }
   ]
 }
