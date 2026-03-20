@@ -71,7 +71,7 @@ $articleSlug = $_GET['article'] ?? null;
                         <small class="text-uppercase fw-bold text-primary mb-2"><?php echo $post['category']; ?></small>
                         <h3 class="fw-bold mb-3 text-dark"><?php echo $post['title']; ?></h3>
                         <p class="text-muted mb-4"><?php echo substr($post['content'], 0, 110); ?>...</p>
-                        <a href="?page=home&article=<?php echo $post['slug']; ?>" class="mt-auto btn btn-dark py-3 rounded-pill fw-bold">Lees Verhaal</a>
+                        <a href="?page=home&article=<?php echo $post['slug']; ?>" class="mt-auto btn btn-dark py-3 rounded-pill fw-bold">Lees Artikel</a>
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@ $articleSlug = $_GET['article'] ?? null;
                         <?php echo $post['content']; ?>
                     </div>
                     <div class="mt-5 pt-4 border-top">
-                        <a href="?page=home" class="btn btn-outline-dark rounded-pill px-4">Vorige pagina</a>
+                        <a href="?page=home" class="btn btn-outline-dark rounded-pill px-4 shadow-sm">Vorige pagina</a>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@ $articleSlug = $_GET['article'] ?? null;
         <div class="row justify-content-center text-center">
             <div class="col-md-6 bg-white p-5 rounded-5 shadow-sm border">
                 <div class="mb-4">
-                    <img src="https://ui-avatars.com/api/?name=<?php echo urlencode($data['author']['name']); ?>&size=150&background=6366f1&color=fff" class="rounded-circle shadow-lg">
+                    <img src="https://ui-avatars.com/api/?name=<?php echo urlencode($data['author']['name']); ?>&size=150&background=6366f1&color=fff" class="rounded-circle shadow-lg border border-5 border-white">
                 </div>
                 <h2 class="fw-extrabold text-dark"><?php echo $data['author']['name']; ?></h2>
                 <p class="text-primary fw-bold">Software Developer & Vibe Coder</p>
