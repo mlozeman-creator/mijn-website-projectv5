@@ -9,52 +9,69 @@ $articleSlug = $_GET['article'] ?? null;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web-Edu | Technisch Portfolio</title>
+    <title>Web-Edu | Vibe Coding & Tech</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { --accent: #2563eb; --dark: #0f172a; }
-        body { background-color: #f8fafc; font-family: 'Segoe UI', system-ui, sans-serif; }
-        .navbar { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; }
-        .hero { background: var(--dark); color: white; padding: 120px 0 80px; clip-path: ellipse(150% 100% at 50% 0%); }
-        .card-blog { border: none; border-radius: 20px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); transition: 0.4s; }
-        .card-blog:hover { transform: translateY(-10px); }
-        .code-block { background: #1e293b; color: #f8fafc; padding: 20px; border-radius: 12px; font-family: monospace; overflow-x: auto; }
-        .badge-tech { background: #e2e8f0; color: #475569; border-radius: 6px; }
+        :root { --accent: #6366f1; --dark: #0f172a; }
+        body { background-color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; color: #334155; }
+        .navbar { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; }
+        .hero { 
+            background: radial-gradient(circle at top right, #6366f1, #a855f7); 
+            color: white; 
+            padding: 140px 0 100px; 
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+        .card-blog { 
+            border: none; 
+            border-radius: 24px; 
+            background: white;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #f1f5f9;
+        }
+        .card-blog:hover { 
+            transform: translateY(-12px) scale(1.02); 
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+        .badge-vibe { background: linear-gradient(90deg, #6366f1, #a855f7); color: white; border: none; }
+        .code-block { background: #1e293b; color: #38bdf8; padding: 25px; border-radius: 16px; font-family: 'Fira Code', monospace; font-size: 0.85rem; }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
     <div class="container">
-        <a class="navbar-brand fw-bold text-primary" href="?page=home">WEB-EDU</a>
+        <a class="navbar-brand fw-extrabold text-dark" href="?page=home">WEB<span class="text-primary">.VIBE</span></a>
         <div class="navbar-nav ms-auto">
-            <a class="nav-link" href="?page=home">Blog</a>
-            <a class="nav-link" href="?page=tech">Techniek</a>
-            <a class="nav-link" href="?page=author">Over Mij</a>
+            <a class="nav-link fw-semibold" href="?page=home">Feed</a>
+            <a class="nav-link fw-semibold" href="?page=tech">Stack</a>
+            <a class="nav-link fw-semibold" href="?page=author">Creator</a>
         </div>
     </div>
 </nav>
 
 <?php if ($page === 'home' && !$articleSlug): ?>
-<header class="hero text-center mb-5">
+<header class="hero text-center">
     <div class="container">
-        <h1 class="display-4 fw-bold mb-3">Educatief Webblog</h1>
-        <p class="lead opacity-75">Gerealiseerd met PHP, GitHub & Vercel CI/CD</p>
+        <span class="badge badge-vibe px-3 py-2 mb-3">Powered by Vibe Coding</span>
+        <h1 class="display-3 fw-extrabold mb-3">Next-Gen Web Edu</h1>
+        <p class="lead opacity-90 mx-auto" style="max-width: 600px;">Waar techniek en creativiteit samenkomen in een moderne cloud-workflow.</p>
     </div>
 </header>
 <?php endif; ?>
 
-<div class="container" style="margin-top: <?php echo ($page === 'home' && !$articleSlug) ? '40px' : '120px'; ?>;">
+<div class="container" style="margin-top: <?php echo ($page === 'home' && !$articleSlug) ? '60px' : '140px'; ?>;">
     
     <?php if ($page === 'home' && !$articleSlug): ?>
         <div class="row g-4">
             <?php foreach ($data['articles'] as $post): ?>
-            <div class="col-md-6 col-lg-3">
-                <div class="card card-blog h-100 p-3">
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-blog h-100 p-4">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="fw-bold"><?php echo $post['title']; ?></h5>
-                        <p class="text-muted small"><?php echo substr($post['content'], 0, 100); ?>...</p>
-                        <a href="?page=home&article=<?php echo $post['slug']; ?>" class="mt-auto btn btn-primary rounded-pill">Lees Artikel</a>
+                        <small class="text-uppercase tracking-widest fw-bold text-primary mb-2"><?php echo $post['category']; ?></small>
+                        <h3 class="fw-extrabold mb-3 text-dark"><?php echo $post['title']; ?></h3>
+                        <p class="text-muted mb-4"><?php echo substr($post['content'], 0, 110); ?>...</p>
+                        <a href="?page=home&article=<?php echo $post['slug']; ?>" class="mt-auto btn btn-dark py-3 rounded-pill fw-bold">Read Story</a>
                     </div>
                 </div>
             </div>
@@ -64,20 +81,22 @@ $articleSlug = $_GET['article'] ?? null;
     <?php elseif ($page === 'tech'): ?>
         <div class="row justify-content-center">
             <div class="col-lg-10">
-                <h1 class="fw-bold mb-4">Technisch Dossier</h1>
-                <div class="bg-white p-4 rounded-4 shadow-sm mb-4">
-                    <h4>Bestandsstructuur</h4>
-                    <pre class="code-block">
-root/
-├── api/
-│   └── index.php       <-- De PHP Logic Engine
-├── data/
-│   └── content.json    <-- De Flat-file Database
-└── vercel.json         <-- Infrastructure Configuration</pre>
-                </div>
-                <div class="bg-white p-4 rounded-4 shadow-sm">
-                    <h4>CI/CD Workflow</h4>
-                    <p>Dit project gebruikt een automatische pijplijn. Elke <strong>git push</strong> naar GitHub triggert een build op Vercel. De PHP-runtime (versie 0.7.2) zorgt voor de server-side uitvoering in een serverless omgeving.</p>
+                <h1 class="fw-extrabold mb-5 display-4">Technical Stack</h1>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="bg-white p-5 rounded-4 shadow-sm h-100 border border-light">
+                            <h4 class="fw-bold mb-4 text-primary">Deployment Flow</h4>
+                            <p>CI/CD via GitHub & Vercel. Automatisering van de build-fase middels custom runtimes.</p>
+                            <div class="code-block mt-4">git commit -m "Vibe upgrade" <br> git push origin main</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bg-white p-5 rounded-4 shadow-sm h-100 border border-light">
+                            <h4 class="fw-bold mb-4 text-primary">Backend Engine</h4>
+                            <p>Server-side rendering met PHP. Data-injectie via JSON flat-files voor maximale performance.</p>
+                            <div class="code-block mt-4">$data = json_decode($json);</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -87,31 +106,38 @@ root/
         $post = null;
         foreach($data['articles'] as $a) { if($a['slug'] === $articleSlug) { $post = $a; break; } }
         if ($post): ?>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 bg-white p-5 rounded-4 shadow-sm">
-                    <h1 class="fw-bold mb-4"><?php echo $post['title']; ?></h1>
-                    <div class="lh-lg text-secondary" style="white-space: pre-line;">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 bg-white p-5 rounded-5 shadow-lg border border-light">
+                    <nav class="mb-5"><a href="?page=home" class="btn btn-light rounded-pill px-4">← Terug naar feed</a></nav>
+                    <span class="badge bg-soft-primary text-primary mb-3"><?php echo $post['category']; ?></span>
+                    <h1 class="display-5 fw-extrabold mb-4 text-dark"><?php echo $post['title']; ?></h1>
+                    <div class="lh-lg text-secondary fs-5" style="white-space: pre-line;">
                         <?php echo $post['content']; ?>
                     </div>
-                    <a href="?page=home" class="btn btn-outline-primary mt-5 rounded-pill">← Terug</a>
                 </div>
             </div>
         <?php endif; ?>
 
     <?php elseif ($page === 'author'): ?>
         <div class="row justify-content-center text-center">
-            <div class="col-md-6 bg-white p-5 rounded-4 shadow-sm">
-                <img src="https://ui-avatars.com/api/?name=<?php echo urlencode($data['author']['name']); ?>&size=100&background=2563eb&color=fff" class="rounded-circle mb-3">
-                <h2 class="fw-bold"><?php echo $data['author']['name']; ?></h2>
-                <p class="text-muted"><?php echo $data['author']['bio']; ?></p>
+            <div class="col-md-6 bg-white p-5 rounded-5 shadow-sm border border-light">
+                <div class="mb-4">
+                    <img src="https://ui-avatars.com/api/?name=<?php echo urlencode($data['author']['name']); ?>&size=150&background=6366f1&color=fff" class="rounded-circle shadow-lg border border-5 border-white">
+                </div>
+                <h2 class="fw-extrabold text-dark"><?php echo $data['author']['name']; ?></h2>
+                <p class="text-primary fw-bold">Software Architect & Vibe Coder</p>
+                <p class="text-muted fs-5"><?php echo $data['author']['bio']; ?></p>
             </div>
         </div>
     <?php endif; ?>
 </div>
 
-<footer class="py-5 text-center text-muted small">
-    &copy; <?php echo date('Y'); ?> - MBO Niveau 4 Webdevelopment Opdracht
+<footer class="py-5 text-center mt-5">
+    <div class="container">
+        <p class="text-muted small fw-bold mb-0">© 2026 WEB.VIBE EDU PLATFORM</p>
+    </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
