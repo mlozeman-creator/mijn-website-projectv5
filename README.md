@@ -1,31 +1,47 @@
-# 🎓 Educatief Webplatform & Technisch Dossier
+# 🚀 WEB.EDU: Modern Webonderwijs & Vibe Coding
 **Project MBO Niveau 4 - Software Development**
 
-Dit project is een geavanceerd, dynamisch blogplatform gebouwd met **PHP 8.x** en **Bootstrap 5**. Het dient als bewijsvoering voor het beheersen van moderne deployment-technieken, serverloze infrastructuren en probleemoplossend vermogen (troubleshooting) binnen een cloud-omgeving.
+Dit project is een dynamisch educatief platform dat laat zien hoe moderne webontwikkeling werkt. De focus ligt op de synergie tussen **PHP**, **Cloud-hosting (Vercel)** en de opkomende trend van **Vibe Coding**.
 
-## 🔗 Live Project
-Bekijk de website hier: **[PLAK HIER JE VERCEL URL]**
+## 🔗 Live Website
+Bekijk het resultaat hier: **https://mjin-website-projectv5.vercel.app/**
 
 ---
 
-## 🛠️ Technische Specificaties
-* **Engine:** Custom PHP routering in `api/index.php`.
-* **Database:** JSON-gebaseerde flat-file database (`data/content.json`) voor laagdrempelig contentbeheer.
-* **Frontend:** Mobile-first design middels Bootstrap 5 met een focus op UX/UI.
-* **Hosting:** Serverless PHP-runtime op Vercel (`vercel-php@0.7.2`).
-* **CI/CD:** Volledig geautomatiseerde pijplijn via GitHub Actions/Vercel Integratie.
+## 💡 Wat is Vibe Coding?
+In dit project is gebruikgemaakt van **Vibe Coding**. Dit houdt in dat ik als ontwikkelaar de regie voer over de architectuur, de "vibe" (gebruikerservaring) en de logica, terwijl ik AI-gestuurde tools inzet om razendsnel complexe syntax en server-configuraties op te lossen. 
 
-## 🔍 Troubleshooting (Geleerde Lessen)
-Tijdens de ontwikkeling zijn de volgende kritieke uitdagingen opgelost:
-1.  **Deployment Errors:** Problemen met ongeldige eigenschappen in de serverconfiguratie opgelost door strikte scheiding van data en logica.
-2.  **Runtime Versiebeheer:** Handmatige correctie van de PHP-builder naar versie `0.7.2` na het bereiken van de *End-of-Life* status van oudere Node.js omgevingen op Vercel.
-3.  **Routing:** Implementatie van een dynamisch slugs-systeem om artikelen in te laden zonder fysieke HTML-bestanden per pagina.
+* **Toegepast op dit project:** Het oplossen van de Vercel PHP-runtime fouten en het bouwen van de dynamische routing is gedaan door nauwe samenwerking met AI, waardoor de focus bleef liggen op het eindproduct in plaats van op kleine typefouten.
 
-## 📂 Projectstructuur
+
+
+---
+
+## 🛠️ De Technische Stack
+* **Taal:** PHP 8.x (Server-side rendering).
+* **Frontend:** Bootstrap 5 met een custom "Plus Jakarta Sans" interface.
+* **Database:** JSON flat-file database (`data/content.json`).
+* **Hosting:** Vercel (Serverless infrastructuur).
+* **Automatisering:** CI/CD koppeling tussen GitHub en Vercel.
+
+---
+
+## 🔍 Logboek: Problemen & Oplossingen (Troubleshooting)
+Tijdens de ontwikkeling zijn de volgende obstakels overwonnen:
+
+1.  **Configuratie-fout:** Vercel weigerde de build omdat data en instellingen in de war waren. Opgelost door `vercel.json` strikt technisch te maken.
+2.  **Runtime Veroudering:** De standaard PHP-runtime werkte niet met de nieuwste Node.js versies. Opgelost door handmatig de runtime te updaten naar `vercel-php@0.7.2`.
+3.  **Taal & Vibe:** De hele interface is omgebouwd van Engels naar Nederlands om beter aan te sluiten bij de doelgroep van de opdracht.
+
+
+
+---
+
+## 📂 Bestandsstructuur
 ```text
 ├── api/
-│   └── index.php       # Hoofdlogica, routering en weergave
+│   └── index.php       # De 'motor' van de site (routering & logica)
 ├── data/
-│   └── content.json    # Dynamische artikelen, auteurinfo en metadata
-├── vercel.json         # Infrastructuur-configuratie (Runtime & Routes)
+│   └── content.json    # De inhoud (artikelen, auteur, vibes)
+├── vercel.json         # Server-instellingen voor de cloud
 └── README.md           # Deze documentatie
