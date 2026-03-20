@@ -12,16 +12,14 @@ if ($filter !== 'alles') {
     });
 }
 $categories = array_unique(array_column($data['articles'], 'category'));
-function berekenLeestijd($tekst) {
-    return ceil(str_word_count($tekst) / 200);
-}
+function berekenLeestijd($t) { return ceil(str_word_count($t) / 200); }
 ?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEB.EDU | Portfolio Mark Lozeman</title>
+    <title>WEB.EDU | Mark Lozeman</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
@@ -31,22 +29,19 @@ function berekenLeestijd($tekst) {
         .hero { background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); color: white; padding: 160px 0 120px; clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); }
         .filter-btn { border-radius: 50px; padding: 8px 24px; transition: 0.3s; border: 1px solid #e2e8f0; background: white; text-decoration: none; color: #64748b; font-weight: 700; }
         .filter-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
-        .card-blog { border: none; border-radius: 28px; transition: all 0.4s ease; background: white; border: 1px solid #f1f5f9; overflow: hidden; }
-        .card-blog:hover { transform: translateY(-12px); box-shadow: 0 30px 60px rgba(0,0,0,0.08); }
-        .card-img-custom { height: 200px; object-fit: cover; }
-        .flow-step { text-align: center; flex: 1; }
-        .flow-icon { font-size: 2rem; margin-bottom: 5px; }
+        .card-blog { border: none; border-radius: 28px; transition: 0.4s; background: white; border: 1px solid #f1f5f9; overflow: hidden; }
+        .card-blog:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.08); }
+        .flow-step { text-align: center; flex: 1; color: #0f172a; }
     </style>
 </head>
 <body>
-
 <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-    <div class="container">
+    <div class="container text-dark">
         <a class="navbar-brand fw-extrabold text-dark fs-3" href="?page=home">WEB<span class="text-primary">.EDU</span></a>
-        <div class="navbar-nav ms-auto">
-            <a class="nav-link fw-bold px-3" href="?page=home">Artikelen</a>
-            <a class="nav-link fw-bold px-3" href="?page=tech">De Techniek</a>
-            <a class="nav-link fw-bold px-3" href="?page=author">Mark Lozeman</a>
+        <div class="navbar-nav ms-auto text-dark">
+            <a class="nav-link fw-bold px-3 text-dark" href="?page=home">Artikelen</a>
+            <a class="nav-link fw-bold px-3 text-dark" href="?page=tech">De Techniek</a>
+            <a class="nav-link fw-bold px-3 text-dark" href="?page=author">Mark Lozeman</a>
         </div>
     </div>
 </nav>
@@ -55,8 +50,8 @@ function berekenLeestijd($tekst) {
 <header class="hero text-center text-white">
     <div class="container">
         <span class="badge bg-white text-primary px-4 py-2 mb-4 shadow-lg rounded-pill fw-bold">Vibe Coding Elite v2.0</span>
-        <h1 class="display-2 fw-extrabold mb-4">Leren. Bouwen. Publiceren.</h1>
-        <p class="lead opacity-90 mx-auto fs-4" style="max-width: 700px;">Een technisch meesterwerk van Mark Lozeman over modern webdesign.</p>
+        <h1 class="display-3 fw-extrabold mb-3 text-white">Modern Webonderwijs</h1>
+        <p class="lead opacity-90 mx-auto fs-4 text-white" style="max-width: 700px;">Project van Mark Lozeman over cloud-architectuur.</p>
     </div>
 </header>
 <section class="container mb-5 text-center">
@@ -71,17 +66,14 @@ function berekenLeestijd($tekst) {
 
 <div class="container" style="margin-top: <?php echo ($page === 'home' && !$articleSlug) ? '20px' : '140px'; ?>;">
     <?php if ($page === 'home' && !$articleSlug): ?>
-        <div class="row g-4 mb-5">
+        <div class="row g-4 mb-5 text-dark">
             <?php foreach ($filteredArticles as $post): ?>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4 text-dark">
                 <div class="card card-blog h-100 shadow-sm text-dark">
-                    <img src="<?php echo $post['image']; ?>" class="card-img-custom" alt="Visual">
-                    <div class="card-body p-4 d-flex flex-column">
-                        <div class="d-flex justify-content-between mb-3 text-dark">
-                            <span class="badge bg-light text-primary border rounded-pill px-3"><?php echo $post['category']; ?></span>
-                            <small class="fw-bold">⏱ <?php echo berekenLeestijd($post['content']); ?> min</small>
-                        </div>
-                        <h3 class="fw-bold mb-3"><?php echo $post['title']; ?></h3>
+                    <img src="<?php echo $post['image']; ?>" class="card-img-top" style="height:200px; object-fit:cover;" alt="beeld">
+                    <div class="card-body p-4 d-flex flex-column text-dark">
+                        <small class="text-primary fw-bold mb-2"><?php echo $post['category']; ?></small>
+                        <h3 class="fw-bold mb-3 text-dark"><?php echo $post['title']; ?></h3>
                         <p class="text-muted mb-4"><?php echo substr($post['content'], 0, 110); ?>...</p>
                         <a href="?page=home&article=<?php echo $post['slug']; ?>" class="mt-auto btn btn-dark rounded-pill py-3 fw-bold">Lees Artikel</a>
                     </div>
@@ -89,85 +81,77 @@ function berekenLeestijd($tekst) {
             </div>
             <?php endforeach; ?>
         </div>
-
     <?php elseif ($page === 'tech'): ?>
         <div class="row justify-content-center mb-5 text-dark">
             <div class="col-lg-10">
                 <h1 class="fw-extrabold mb-5 display-4 text-center">De Architectuur</h1>
                 <div class="row g-4">
-                    <div class="col-md-8">
+                    <div class="col-md-8 text-dark">
                         <div class="p-5 rounded-4 shadow-sm border bg-white h-100">
                             <h4 class="fw-bold mb-4 text-primary">Cloud Publicatie Flow</h4>
-                            <p class="fs-5">Dit project gebruikt een geautomatiseerde pijplijn. De techniek is onzichtbaar, het resultaat is direct.</p>
+                            <p class="fs-5">Automatische CI/CD pijplijn van Mark's PC naar Vercel Edge.</p>
                             <div class="d-flex justify-content-between align-items-center mt-5 p-4 bg-light rounded-4 border">
-                                <div class="flow-step"><div class="flow-icon">💻</div><small class="fw-bold">Mark's PC</small></div>
+                                <div class="flow-step"><div>💻</div><small class="fw-bold">Mark</small></div>
                                 <div class="text-primary fs-3">➜</div>
-                                <div class="flow-step"><div class="flow-icon">🐙</div><small class="fw-bold">GitHub</small></div>
+                                <div class="flow-step"><div>🐙</div><small class="fw-bold">GitHub</small></div>
                                 <div class="text-primary fs-3">➜</div>
-                                <div class="flow-step"><div class="flow-icon">⚡</div><small class="fw-bold">Vercel</small></div>
+                                <div class="flow-step"><div>⚡</div><small class="fw-bold">Vercel</small></div>
                                 <div class="text-primary fs-3">➜</div>
-                                <div class="flow-step"><div class="flow-icon">🌍</div><small class="fw-bold">Live</small></div>
+                                <div class="flow-step"><div>🌍</div><small class="fw-bold">Live</small></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="p-5 rounded-4 shadow-sm border bg-white h-100 text-center">
-                            <h4 class="fw-bold mb-4 text-primary">Systeem Status</h4>
-                            <ul class="list-unstyled fw-bold text-muted fs-5">
-                                <li class="mb-3">🔥 Status: Online</li>
-                                <li class="mb-3">📦 Data: JSON 2.0</li>
-                                <li class="mb-3">🚀 Engine: PHP 8.x</li>
+                    <div class="col-md-4 text-dark text-center">
+                        <div class="p-5 rounded-4 shadow-sm border bg-white h-100">
+                            <h4 class="fw-bold mb-4 text-primary text-dark">Status</h4>
+                            <ul class="list-unstyled fw-bold text-muted fs-5 text-dark">
+                                <li class="mb-3 text-dark">🔥 Online</li>
+                                <li class="mb-3 text-dark">📦 JSON 2.0</li>
+                                <li class="mb-3 text-dark">🚀 PHP 8.x</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     <?php elseif ($articleSlug): ?>
         <?php 
         $post = null;
         foreach($data['articles'] as $a) { if($a['slug'] === $articleSlug) { $post = $a; break; } }
         if ($post): ?>
             <div class="row justify-content-center mb-5 text-dark">
-                <div class="col-lg-9">
-                    <a href="?page=home" class="btn btn-link text-decoration-none fw-bold text-muted mb-4 p-0">← TERUG</a>
+                <div class="col-lg-9 text-dark">
+                    <nav class="mb-4"><a href="?page=home" class="btn btn-link text-decoration-none fw-bold text-muted p-0">← TERUG</a></nav>
                     <div class="bg-white p-5 rounded-5 shadow-lg border">
                         <img src="<?php echo $post['image']; ?>" class="w-100 rounded-4 mb-5 shadow-sm" style="height: 400px; object-fit: cover;">
-                        <h1 class="display-4 fw-extrabold mb-4"><?php echo $post['title']; ?></h1>
-                        <p class="text-primary fw-bold mb-4">Leestijd: <?php echo berekenLeestijd($post['content']); ?> minuten</p>
+                        <h1 class="display-4 fw-extrabold mb-4 text-dark"><?php echo $post['title']; ?></h1>
+                        <p class="text-primary fw-bold mb-4">Leestijd: <?php echo berekenLeestijd($post['content']); ?> min</p>
                         <div class="lh-lg fs-5 text-secondary" style="white-space: pre-line;"><?php echo $post['content']; ?></div>
                         <div class="mt-5 pt-4 border-top">
-                            <a href="?page=home" class="btn btn-dark rounded-pill px-5 py-3 fw-bold shadow">Vorige Pagina</a>
+                            <a href="?page=home" class="btn btn-dark rounded-pill px-5 py-3 fw-bold">Vorige Pagina</a>
                         </div>
                     </div>
                 </div>
             </div>
         <?php endif; ?>
-
     <?php elseif ($page === 'author'): ?>
         <div class="row justify-content-center text-center text-dark">
             <div class="col-md-6 bg-white p-5 rounded-5 shadow-lg border">
                 <img src="https://ui-avatars.com/api/?name=Mark+Lozeman&size=150&background=6366f1&color=fff" class="rounded-circle mb-4 border border-5 border-white shadow">
                 <h2 class="fw-extrabold text-dark">Mark Lozeman</h2>
-                <p class="text-primary fw-bold fs-5">Software Developer & Vibe Architect</p>
+                <p class="text-primary fw-bold fs-5">Software Developer & Architect</p>
                 <p class="text-muted fs-5 mb-5"><?php echo $data['author']['bio']; ?></p>
                 <div class="d-grid gap-2 d-md-block">
-                    <a href="mailto:<?php echo $data['author']['email']; ?>" class="btn btn-primary px-5 py-3 rounded-pill fw-bold shadow-sm me-md-2">Email Mark</a>
-                    <a href="<?php echo $data['author']['github_url']; ?>" class="btn btn-outline-dark px-5 py-3 rounded-pill fw-bold shadow-sm">GitHub</a>
+                    <a href="mailto:mark.lozeman@windesheim.nl" class="btn btn-primary px-5 py-3 rounded-pill fw-bold me-md-2">Email</a>
+                    <a href="https://github.com/mlozeman-creator/mijn-website-projectv5" class="btn btn-outline-dark px-5 py-3 rounded-pill fw-bold">GitHub</a>
                 </div>
             </div>
         </div>
     <?php endif; ?>
 </div>
-
 <footer class="py-5 text-center mt-5 bg-dark text-white">
-    <div class="container text-center">
-        <h5 class="fw-extrabold mb-1">WEB.EDU ELITE</h5>
-        <p class="opacity-50 small mb-0">Meesterproef MBO-4 Software Development | Mark Lozeman © 2026</p>
-    </div>
+    <p class="opacity-50 small mb-0">WEB.EDU ELITE | Mark Lozeman | Windesheim © 2026</p>
 </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
