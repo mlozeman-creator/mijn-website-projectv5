@@ -31,6 +31,13 @@
       "title": "Troubleshooting: Debugging Logboek",
       "category": "Praktijk",
       "content": "Tijdens de bouw overwonnen:\n* **Configuratie-fout:** vercel.json bevatte data in plaats van instellingen.\n* **Runtime Error:** De PHP-builder versie was offline. Opgelost door versie 0.7.2 te forceren.\n* **Node.js EOL:** Vercel weigerde oude Node-versies. Opgelost door de omgeving te moderniseren."
-    }
+    },
+    {
+  "id": 5,
+  "slug": "vibe-coding",
+  "title": "Vibe Coding: De Nieuwe Revolutie",
+  "category": "Trend",
+  "content": "Wat is Vibe Coding? Het is een nieuwe manier van programmeren waarbij de developer zich focust op de 'vibe' (het concept, de flow en de user experience) terwijl AI-tools de complexe syntax en boilerplate code afhandelen.\n\n**Hoe is dit toegepast op deze blog?**\nDit project is een puur voorbeeld van Vibe Coding. In plaats van urenlang handmatig te debuggen op server-instellingen, hebben we via natuurlijke taal gecommuniceerd over de gewenste output. De AI fungeerde als de 'junior developer' die de code schreef, terwijl jij als 'lead developer' de architectuur bewaakte, de foutmeldingen analyseerde en de richting bepaalde.\n\nHet resultaat? Een snelle realisatie van een complex CI/CD-systeem zonder vast te lopen in syntax-details, maar met volledige controle over het eindproduct."
+}
   ]
 }
