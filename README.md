@@ -1,42 +1,43 @@
-# 🚀 WEB.EDU ELITE v3.5 - Mark Lozeman
-**Rol:** HBO Webdeveloper | **Doelgroep:** MBO-4 Software Development
-**Status:** Stable Production Release | **Stack:** Serverless PHP & Edge Computing
+# 🚀 WEB.EDU ELITE v3.8 - HBO Webmasterclass
+**Architect:** Mark Lozeman (HBO Webdeveloper)
+**Doelgroep:** MBO-4 Software Development Professionals
+**Stack:** PHP 8.3 Serverless Edge | JSON Flat-file Database | Bootstrap 5.3 ELITE
 
 ---
 
-## 🌟 Project Visie
-WEB.EDU is een high-performance educatief platform, ontworpen vanuit een **HBO-architectuur perspectief**. Het doel is om MBO-4 studenten kennis te laten maken met professionele software-engineering concepten zoals *Statelessness*, *CI/CD pipelines* en *Data-driven rendering*.
+## 🌟 Project Filosofie
+WEB.EDU is niet slechts een blog; het is een **Decoupled Cloud Architecture** demonstratie. Als HBO Webdeveloper is dit platform ontworpen om de brug te slaan tussen fundamentele programmeerkennis en professionele Enterprise-standaarden. Het systeem scheidt de **Data Layer** (JSON), **Business Logic** (PHP) en **Presentation Layer** (UI) strikt van elkaar.
 
-### Kernfunctionaliteiten voor de MBO-4 Professional:
-* **Dynamic REST-style Routing:** Alle inkomende HTTP-verzoeken worden afgehandeld door een centrale controller (`api/index.php`), wat zorgt voor een schone URL-structuur en schaalbaarheid.
-* **HBO Admin Console (RBAC):** Een geavanceerd 'Role-Based Access Control' systeem. Door de parameter `?role=admin` te gebruiken, ontsluit de applicatie een real-time dashboard met data-analytics.
-* **Flat-file JSON Engine:** In plaats van een traditionele SQL-database gebruikt dit systeem een gestructureerd JSON-schema. Dit minimaliseert I/O-overhead en maximaliseert de snelheid op Edge-nodes.
-* **Sanitized HTML Injection:** De content wordt veilig gerenderd met ondersteuning voor rijke tekstopmaak, wat de leesbaarheid van de 10 diepgaande educatieve modules optimaliseert.
+### Kernconcepten voor de MBO-4 Professional:
+* **Stateless Architecture:** De applicatie bewaart geen sessiegegevens op de lokale schijf, wat horizontale schaling op het wereldwijde Vercel Edge-netwerk mogelijk maakt.
+* **Latency Reduction:** Door gebruik te maken van Anycast DNS en Edge Functions wordt de PHP-code uitgevoerd op de node die fysiek het dichtst bij de student staat.
+* **Security by Design:** Ingebouwde bescherming tegen Cross-Site Scripting (XSS) en Path Traversal door strikte input-sanitizing en output-escaping.
+* **High-Performance Data:** Gebruik van een Flat-file JSON engine elimineert database-latency en voorkomt SQL-injection kwetsbaarheden volledig.
 
 ---
 
-## 🛠️ Technische Stack & Architectuur
-| Component | Technologie | HBO Implementatie Focus |
+## 🛠️ Technische Stack & HBO-Implementatie
+| Component | Technologie | HBO-Expertise Focus |
 | :--- | :--- | :--- |
-| **Runtime** | PHP 8.3 (Serverless) | Stateless execution & Geheugen-efficiëntie |
-| **Frontend** | Bootstrap 5.3 + Custom CSS | Mobile-first Design & Visual Hierarchy |
-| **Data Layer** | JSON Schema v2.2 | NoSQL-style dataverwerking & Integriteit |
-| **Cloud** | Vercel Edge Network | Anycast DNS, SSL Termination & Global CDN |
-| **Workflow** | Git CI/CD | Automated Builds & Semantic Versioning |
+| **Backend Engine** | PHP 8.3 (Serverless) | Gebruik van geavanceerde Array-functies en Null Coalescing. |
+| **Data Storage** | JSON Schema v2.2 | Gestructureerde NoSQL-opslag voor maximale leesbaarheid en snelheid. |
+| **Frontend UI** | Bootstrap 5.3 + Jakarta Sans | Toepassing van Gestalt-principes en Visual Hierarchy. |
+| **Cloud Infra** | Vercel Global Edge | CI/CD automatisering met automatische SSL-termination. |
+| **Versiebeheer** | Git (Semantic Versioning) | Professionele release-management met Git-tags. |
 
 ---
 
-## 📦 Versiebeheer & Deployment Workflow
-Als HBO Webdeveloper hanteren we een strikte **DevOps workflow**. Elke wijziging wordt gevalideerd en via Git naar de productie-omgeving gepusht.
+## 📦 Versiebeheer & CI/CD Workflow
+Binnen deze HBO-workflow is handmatige upload verleden tijd. We maken gebruik van een volledig geautomatiseerde **Deployment Pipeline**.
 
-### Het Deployment Proces:
-1.  **Code & Content:** Wijzigingen doorvoeren in PHP of JSON.
-2.  **Versioning:** Gebruik van Git-tags om releases te markeren (v3.5).
-3.  **CI/CD:** Automatische build-triggering op het Vercel-platform.
+### Deployment Routine:
+1.  **Ontwikkeling:** Lokale wijzigingen in PHP-logica of JSON-data.
+2.  **Versie-Tagging:** Mijlpalen markeren voor transparante release-historie.
+3.  **Automatisering:** Git-push triggert een 'Production Build' op de Edge-nodes.
 
 ```bash
-# Professionele Push-routine
+# De professionele workflow
 git add .
-git commit -m "feat: hbo masterclass v3.5 - implementatie analytics dashboard"
-git tag -a v3.5 -m "HBO Production Release"
+git commit -m "feat: upgrade naar v3.8 - implementatie deep-dive curriculum"
+git tag -a v3.8 -m "HBO Max Depth Release"
 git push origin main --tags
