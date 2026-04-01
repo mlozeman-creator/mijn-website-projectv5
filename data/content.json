@@ -1,7 +1,7 @@
 {
   "author": {
     "name": "Mark Lozeman",
-    "bio": "Software Developer & Architect. Focus op Cloud-native PHP, CI/CD en Git-gestuurde workflows.",
+    "bio": "MBO-4 Software Developer & Architect. Gespecialiseerd in Cloud-native PHP-oplossingen, CI/CD-automatisering en de implementatie van schaalbare Flat-file systemen via Vercel Edge.",
     "avatar_name": "Mark+Lozeman", 
     "github_url": "https://github.com/mlozeman-creator/mijn-website-projectv5",
     "email": "mark.lozeman@windesheim.nl"
@@ -10,18 +10,82 @@
     {
       "id": 1,
       "slug": "context-publiceren",
-      "title": "Versiebeheer: De Ruggraten van Development",
+      "title": "Cloud Architectuur: De Reis naar Edge",
       "category": "Theorie",
       "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800",
-      "content": "Softwareontwikkeling is onmogelijk zonder versiebeheer. In dit project gebruiken we <strong>Git</strong>. Git stelt ons in staat om:<br><ul><li><strong>History Tracking:</strong> Elke wijziging wordt opgeslagen in een commit. We kunnen altijd terug naar een werkende versie.</li><li><strong>Branching:</strong> We kunnen experimenteren in een aparte branch (bijv. <em>feature-admin</em>) zonder de live-site (<em>main</em>) te verstoren.</li><li><strong>Tagging:</strong> Met tags (zoals v2.1) markeren we mijlpalen in de ontwikkeling.</li></ul>"
+      "content": "In de moderne IT-wereld is 'online zetten' veranderd in 'deployen'. Bij WEB.EDU maken we gebruik van een <strong>Edge Runtime</strong>. Dit betekent dat onze PHP-code niet op één centrale server draait, maar op duizenden datacenters wereldwijd tegelijk.<br><br>De technische pilaren van dit project:<br><ul><li><strong>DNS (Domain Name System):</strong> De hiërarchische database die namen koppelt aan IP-adressen.</li><li><strong>Serverless Computing:</strong> Onze architectuur is <em>stateless</em>. Elke request start een nieuwe container die na uitvoering verdwijnt.</li><li><strong>SSL/TLS Handshake:</strong> Beveiliging van data-overdracht via automatische certificaten.</li></ul>"
+    },
+    {
+      "id": 2,
+      "slug": "ontwikkeling-proces",
+      "title": "De SDLC: Methodiek en Kwaliteitsbewaking",
+      "category": "Proces",
+      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800",
+      "content": "Softwareontwikkeling zonder proces is als bouwen zonder blauwdruk. Voor dit project is de <strong>Software Development Life Cycle (SDLC)</strong> gevolgd:<br><br><ol><li><strong>Requirements Analyse:</strong> Vaststellen van de 'Fast-by-Default' eis.</li><li><strong>Design Phase:</strong> Implementatie van <em>Mobile First Design</em> via Bootstrap 5.</li><li><strong>Implementation:</strong> Modulaire PHP-opbouw met herbruikbare logica.</li><li><strong>Testing & Debugging:</strong> Live monitoring via Vercel logs.</li></ol>"
+    },
+    {
+      "id": 3,
+      "slug": "mogelijkheden-keuzes",
+      "title": "Custom PHP vs. CMS: De Strategische Keuze",
+      "category": "Techniek",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
+      "content": "Waarom kozen we niet voor WordPress of Wix?<br><br><ul><li><strong>Performance:</strong> Geen 'bloatware' of onnodige database-queries.</li><li><strong>Security:</strong> Geen open SQL-poorten, dus geen SQL-injections mogelijk.</li><li><strong>Inzicht:</strong> Zelf de <em>Business Logic</em> schrijven bewijst diepgaande technische kennis.</li></ul>"
     },
     {
       "id": 4,
       "slug": "troubleshooting-log",
-      "title": "Logboek & Versiehistorie",
+      "title": "Logboek: Troubleshooting & Versiehistorie",
       "category": "Praktijk",
       "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800",
-      "content": "<strong>Update 01-04-2026 (v2.0):</strong><br><ul><li><strong>Incident:</strong> PHP warnings op Vercel opgelost via Null Coalescing.</li><li><strong>Migratie:</strong> HTML-rendering geactiveerd voor diepere educatieve content.</li></ul><br><strong>Update 02-04-2026 (v2.1):</strong><br><ul><li><strong>Feature:</strong> Implementatie van Git-versiebeheer UI in de Techniek-sectie.</li><li><strong>Verbetering:</strong> Adminmode hernoemd en badges voor release-tags toegevoegd voor professionele uitstraling.</li></ul>"
+      "content": "<strong>Update 01-04-2026 (v2.0):</strong><br><ul><li><strong>Incident:</strong> 'Undefined Variable' PHP warnings op Vercel.</li><li><strong>Oplossing:</strong> Gebruik van <em>Null Coalescing Operators</em> (??) voor $_GET variabelen.</li></ul><br><strong>Update 02-04-2026 (v2.1):</strong><br><ul><li><strong>Wijziging:</strong> Migratie naar Direct HTML-rendering en implementatie Git-tags.</li></ul><br><strong>Update 03-04-2026 (v2.2):</strong><br><ul><li><strong>Content Expansion:</strong> Toevoeging van 5 nieuwe educatieve modules over API's, Security en UX Design.</li></ul>"
+    },
+    {
+      "id": 5,
+      "slug": "vibe-coding",
+      "title": "De Opkomst van de Vibe Coder",
+      "category": "Trend",
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800",
+      "content": "Vibe Coding is architecturaal dirigeren. De developer focust op de structuur terwijl AI helpt bij de syntax. Cruciaal zijn handmatige <strong>Code Reviews</strong> op veiligheid (XSS) en efficiëntie."
+    },
+    {
+      "id": 6,
+      "slug": "api-fundamentals",
+      "title": "RESTful API's: De Taal van het Web",
+      "category": "Techniek",
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
+      "content": "Een API (Application Programming Interface) laat systemen met elkaar praten. In dit project fungeert onze <code>index.php</code> als een rudimentaire API-endpoint die JSON-data omzet naar visuele componenten.<br><br>Belangrijke REST-principes:<br><ul><li><strong>GET:</strong> Data ophalen (zoals onze artikelen).</li><li><strong>POST:</strong> Nieuwe data versturen.</li><li><strong>Statelessness:</strong> Elk verzoek bevat alle informatie die nodig is, de server onthoudt niets tussen verzoeken door.</li></ul>"
+    },
+    {
+      "id": 7,
+      "slug": "cyber-security-basics",
+      "title": "Security by Design: Bescherm je Code",
+      "category": "Beveiliging",
+      "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800",
+      "content": "Als MBO-4 developer moet security je tweede natuur zijn. In dit project passen we <strong>Input Sanitization</strong> toe.<br><br>Gevaren die we tackelen:<br><ul><li><strong>XSS (Cross-Site Scripting):</strong> Voorkomen dat kwaadaardige scripts in de browser van de gebruiker draaien door output te filteren.</li><li><strong>Path Traversal:</strong> Beveiligen dat gebruikers niet buiten de <code>/data</code> map kunnen kijken via URL-manipulatie.</li><li><strong>HTTPS:</strong> Versleutelen van data in transit via SSL-handshakes.</li></ul>"
+    },
+    {
+      "id": 8,
+      "slug": "ux-ui-design-principles",
+      "title": "UX Design: De Gebruiker Centraal",
+      "category": "Design",
+      "image": "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?w=800",
+      "content": "Een website kan technisch perfect zijn, maar zonder goede User Experience (UX) faalt het. Voor WEB.EDU gebruikten we:<br><ul><li><strong>Visual Hierarchy:</strong> Belangrijke info (titels) zijn groter en dikker gedrukt.</li><li><strong>Micro-interactions:</strong> De subtiele animaties (hover effecten) op onze kaarten geven de gebruiker feedback dat een element klikbaar is.</li><li><strong>Accessibility:</strong> Gebruik van contrastrijke kleuren en leesbare fonts voor een inclusieve ervaring.</li></ul>"
+    },
+    {
+      "id": 9,
+      "slug": "json-vs-xml",
+      "title": "Datastructuren: Waarom JSON wint",
+      "category": "Techniek",
+      "image": "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?w=800",
+      "content": "JSON (JavaScript Object Notation) is de standaard voor data-uitwisseling. Waarom verkiezen we dit boven XML?<br><br><ul><li><strong>Lightweight:</strong> JSON heeft minder 'overhead' (geen afsluitende tags zoals <code>&lt;/tag&gt;</code>), wat bandbreedte bespaart.</li><li><strong>Readability:</strong> Het is makkelijker leesbaar voor zowel mens als machine.</li><li><strong>Native support:</strong> PHP heeft ingebouwde functies zoals <code>json_decode()</code> om razendsnel met deze data te werken.</li></ul>"
+    },
+    {
+      "id": 10,
+      "slug": "cloud-scaling",
+      "title": "Scaling: Van 10 naar 10.000 Gebruikers",
+      "category": "Theorie",
+      "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+      "content": "Hoe groeit een website mee met succes? We maken onderscheid tussen:<br><ul><li><strong>Vertical Scaling:</strong> Een grotere, snellere server kopen.</li><li><strong>Horizontal Scaling:</strong> Meer kleine servers toevoegen die het werk verdelen (Load Balancing).</li><li><strong>Caching:</strong> Statische content (zoals onze afbeeldingen) opslaan op een CDN (Content Delivery Network) zodat de server minder werk heeft.</li></ul>"
     }
   ]
 }
