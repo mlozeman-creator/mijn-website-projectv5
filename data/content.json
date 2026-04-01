@@ -1,7 +1,7 @@
 {
   "author": {
     "name": "Mark Lozeman",
-    "bio": "HBO Webdeveloper & Software Architect. Ik help MBO-studenten de overstap te maken naar professionele Cloud-architectuur, CI/CD-automatisering en 'Security by Design' principes.",
+    "bio": "HBO Webdeveloper & Architect. Ik help MBO-studenten de overstap te maken naar professionele Cloud-architectuur, CI/CD-automatisering en de implementatie van high-performance systemen.",
     "avatar_name": "Mark+Lozeman", 
     "github_url": "https://github.com/mlozeman-creator/mijn-website-projectv5",
     "email": "mark.lozeman@windesheim.nl"
@@ -9,83 +9,83 @@
   "articles": [
     {
       "id": 1,
-      "slug": "cloud-edge-architecture",
+      "slug": "cloud-edge-computing",
       "title": "Cloud Architectuur: Waarom de Edge wint",
       "category": "Theorie",
       "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800",
-      "content": "Als HBO Webdeveloper kijk ik verder dan alleen 'hosting'. Wij gebruiken de <strong>Edge Runtime</strong>. In tegenstelling tot traditionele servers (zoals een VPS), draait onze code op een wereldwijd CDN-netwerk.<br><br><strong>Waarom dit belangrijk is voor MBO-studenten:</strong><ul><li><strong>Latency:</strong> De tijd tussen verzoek en antwoord wordt geminimaliseerd omdat de server fysiek dichtbij de gebruiker staat.</li><li><strong>Statelessness:</strong> Onze PHP-code bewaart geen sessies op de schijf, wat horizontale schaling mogelijk maakt.</li></ul>"
+      "content": "Als HBO Webdeveloper kijk ik verder dan alleen 'hosting'. Wij gebruiken de <strong>Edge Runtime</strong>. In tegenstelling tot traditionele servers, draait onze code op een wereldwijd netwerk van nodes.<br><br><h3>Wat is de Edge?</h3>Stel je voor dat je code niet in één datacenter in Amsterdam staat, maar in duizenden punten tegelijk. Zodra een gebruiker een verzoek doet, wordt de PHP-code uitgevoerd op het punt dat fysiek het dichtstbij de gebruiker staat. Dit noemen we <strong>Latency Reduction</strong>.<br><br><h3>Statelessness</h3>Onze PHP-code bewaart geen gegevens op de lokale schijf. Dit is essentieel. Als een server uitvalt, neemt een andere het direct over zonder dat de gebruiker het merkt. Dit noemen we een <em>Stateless Architecture</em>, een kernprincipe voor moderne webprofessionals."
     },
     {
       "id": 2,
-      "slug": "hbo-sdlc-methodiek",
+      "slug": "sdlc-hbo-perspective",
       "title": "Professionele SDLC: Van Plan naar Productie",
       "category": "Proces",
       "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800",
-      "content": "De <strong>Software Development Life Cycle</strong> is de ruggengraat van elk IT-project. Voor dit platform volgen we een Agile/Scrum hybride methodiek.<br><br><strong>De Fasen:</strong><ol><li><strong>Requirement Analysis:</strong> Wat heeft de MBO-student nodig?</li><li><strong>Architectural Design:</strong> Keuze voor een Flat-file database voor maximale snelheid.</li><li><strong>Implementation:</strong> Schrijven van modulaire PHP-code.</li><li><strong>Verification:</strong> Het testen van de Admin-beveiliging.</li></ol>"
+      "content": "De <strong>Software Development Life Cycle</strong> is de blauwdruk van elk IT-project op HBO-niveau. Het zorgt ervoor dat we niet zomaar code kloppen, maar een product bouwen dat onderhoudbaar is.<br><br><h3>De Fasen bij WEB.EDU:</h3><ul><li><strong>Requirement Analysis:</strong> Vaststellen dat we een lichtgewicht, database-loos systeem nodig hebben voor maximale snelheid.</li><li><strong>Architectural Design:</strong> De keuze voor JSON als data-bron zorgt ervoor dat we geen SQL-injectie risico's hebben.</li><li><strong>Deployment:</strong> Gebruik van Git-hooks zorgt dat elke commit direct live staat (CI/CD).</li></ul>Dit gestructureerde proces voorkomt 'spaghetticode' en zorgt voor een professionele workflow."
     },
     {
       "id": 3,
-      "slug": "custom-php-engine",
-      "title": "Custom PHP vs CMS: De HBO Visie",
+      "slug": "custom-php-performance",
+      "title": "Custom PHP: De HBO-keuze boven CMS",
       "category": "Techniek",
       "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
-      "content": "Veel MBO-opleidingen focussen op WordPress, maar een echte HBO Webdeveloper bouwt zijn eigen engine.<br><ul><li><strong>Geen Bloatware:</strong> Geen onnodige plugins die de site traag maken.</li><li><strong>Volledige Controle:</strong> Elke regel code in de <code>index.php</code> heeft een specifiek doel.</li><li><strong>Veiligheid:</strong> Door geen standaard CMS te gebruiken, vallen we buiten het bereik van de meeste geautomatiseerde hack-scripts.</li></ul>"
+      "content": "Veel MBO-studenten leren werken met WordPress, maar als HBO Webdeveloper wil ik dat je begrijpt wat er 'onder de motorkap' gebeurt.<br><br><h3>Waarom Custom Code?</h3>Een CMS als WordPress laadt vaak duizenden regels code die je niet gebruikt (Bloatware). Onze custom engine laadt alleen wat strikt noodzakelijk is. Dit resulteert in een <strong>Time to First Byte (TTFB)</strong> van minder dan 50ms.<br><br><h3>Beveiliging door Eenvoud</h3>In plaats van een logge database te beveiligen, gebruiken we een read-only JSON file. Dit elimineert een hele categorie aan cyberaanvallen. Dit noemen we <em>Reduced Attack Surface</em>."
     },
     {
       "id": 4,
-      "slug": "developer-logboek",
-      "title": "HBO Logboek: Continuous Improvement v3.5",
+      "slug": "troubleshooting-logboek",
+      "title": "HBO Logboek: Troubleshooting & Reflectie",
       "category": "Praktijk",
       "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800",
-      "content": "<strong>Update v3.5 (De HBO Release):</strong><br><ul><li><strong>Admin Console:</strong> Volledig vernieuwde sidebar met real-time array-processing metrics.</li><li><strong>UX Design:</strong> Implementatie van <em>Visual Feedback</em> animaties voor betere navigatie.</li><li><strong>Code Refactoring:</strong> Optimalisatie van de routing-engine voor snellere laadtijden op Edge-nodes.</li></ul>"
-    },
-    {
-      "id": 5,
-      "slug": "vibe-coding-architectuur",
-      "title": "Vibe Coding: Regie over AI",
-      "category": "Trend",
-      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800",
-      "content": "Vibe Coding is meer dan alleen prompts typen. Het gaat om het begrijpen van de systeemarchitectuur zodat je AI de juiste opdrachten geeft. Als HBO Webdeveloper ben je de <strong>dirigent</strong> van de code."
+      "content": "Een professionele developer wordt herkend aan zijn vermogen om problemen op te lossen. Hier documenteer ik de technische groei van dit project.<br><br><h3>Logboek v3.8:</h3><ul><li><strong>Issue:</strong> PHP warnings op de Vercel Edge runtime. <strong>Fix:</strong> Implementatie van <em>Null Coalescing Operators</em> (??) voor robuuste variabele-initialisatie.</li><li><strong>Wijziging:</strong> Overstap van Markdown naar HTML-rendering in de JSON database voor een professionele educatieve weergave.</li><li><strong>Reflectie:</strong> De scheiding van data en weergave is gelukt. De volgende stap is het implementeren van een GraphQL-laag voor nog snellere data-filtering.</li></ul>"
     },
     {
       "id": 6,
-      "slug": "rest-api-json-data",
-      "title": "RESTful Principes & JSON Data",
+      "slug": "api-restful-logic",
+      "title": "REST API Principes: Data-uitwisseling",
       "category": "Techniek",
       "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
-      "content": "Onze applicatie scheidt data van weergave. Dit is een kernprincipe van <strong>REST</strong>. De JSON-file is onze 'Single Source of Truth'. Dit maakt het mogelijk om in de toekomst makkelijk over te stappen naar een andere frontend, zoals React of Vue, zonder de data aan te passen."
+      "content": "Onze applicatie werkt intern als een <strong>RESTful API</strong>. De JSON-data wordt opgevraagd en door de PHP-controller (index.php) getransformeerd naar HTML.<br><br><h3>Waarom deze scheiding?</h3>Door data (JSON) en weergave (HTML) te scheiden, zijn we voorbereid op de toekomst. Als we morgen een mobiele app willen bouwen, kan die precies dezelfde JSON gebruiken zonder dat we de backend hoeven aan te passen. Dit is de kracht van <em>Decoupled Architecture</em>, een essentieel concept voor de moderne webdeveloper."
     },
     {
       "id": 7,
-      "slug": "security-by-design-hbo",
+      "slug": "security-by-design",
       "title": "Cybersecurity: Escaping & Sanitization",
       "category": "Beveiliging",
       "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800",
-      "content": "Een HBO Webdeveloper bouwt veiligheid in vanaf de eerste regel code. We gebruiken <strong>Output Escaping</strong> om Cross-Site Scripting (XSS) te voorkomen. In dit project gebruiken we PHP-functies om te garanderen dat ingevoerde data nooit als uitvoerbare code kan worden misbruikt."
+      "content": "Veiligheid is geen 'extraatje', het is de basis. Bij WEB.EDU passen we <strong>Security by Design</strong> toe.<br><br><h3>Input vs Output</h3>Zelfs in een klein project moet je alert zijn op Cross-Site Scripting (XSS). In onze code gebruiken we PHP-filters om te garanderen dat data altijd veilig wordt getoond. Een goede developer gaat er altijd vanuit dat data 'besmet' kan zijn (<em>Never trust user input</em>). We versleutelen de verbinding via TLS 1.3, de hoogste standaard voor data-in-transit."
     },
     {
       "id": 8,
-      "slug": "ux-ui-psychology",
-      "title": "UX Psychologie: De MBO Doelgroep",
+      "slug": "ux-psychology",
+      "title": "UX Psychologie: De Gebruiker Centraal",
       "category": "Design",
       "image": "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?w=800",
-      "content": "Design gaat niet om 'mooi', maar om 'bruikbaar'. Voor de MBO-4 doelgroep gebruiken we duidelijke call-to-actions en een heldere <strong>Visual Hierarchy</strong>. De belangrijkste informatie krijgt de meeste visuele aandacht."
+      "content": "Design gaat niet om 'mooi', maar om 'bruikbaar'. We gebruiken de <strong>Gestalt-principes</strong> om de student door de stof te leiden.<br><br><h3>Visual Hierarchy</h3>Door gebruik te maken van contrast en witruimte zorgen we dat de belangrijkste informatie (de tekst van de modules) direct opvalt. Subtiele animaties (hover effecten) geven de gebruiker directe feedback. Dit noemen we <em>Affordance</em>: het visuele signaal dat een element interactief is."
     },
     {
       "id": 9,
-      "slug": "data-structures-efficiency",
-      "title": "Efficiënte Datastructuren in PHP",
+      "slug": "efficiency-data-processing",
+      "title": "Efficiënte Dataverwerking in PHP",
       "category": "Techniek",
       "image": "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?w=800",
-      "content": "Het verwerken van data in PHP vereist kennis van arrays en objecten. In de Admin Console gebruiken we <code>array_map</code> en <code>array_sum</code> om razendsnel statistieken te berekenen zonder de server onnodig te belasten."
+      "content": "Hoe verwerk je duizenden regels data zonder de server te laten zweten? We gebruiken geavanceerde <strong>Array Functions</strong> in PHP.<br><br>In de Admin Console berekenen we live statistieken met <code>array_map</code> en <code>array_sum</code>. Dit is vele malen sneller dan ouderwetse <code>foreach</code> loops. Als HBO-er leer je hoe je de complexiteit van algoritmes (O-notatie) beheerst om je applicaties razendsnel te houden."
     },
     {
       "id": 10,
-      "slug": "scaling-the-cloud",
+      "slug": "scaling-strategies",
       "title": "Scaling: Van MBO Project naar Enterprise",
       "category": "Theorie",
       "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
-      "content": "Wat als WEB.EDU plotseling 1 miljoen gebruikers krijgt? Door onze <strong>Stateless Architectuur</strong> kunnen we horizontaal schalen. We voegen simpelweg meer 'functions' toe aan het netwerk, in plaats van één grote dure server te upgraden."
+      "content": "Wat gebeurt er als deze blog 100.000 bezoekers per minuut krijgt? We bespreken twee strategieën:<br><br><h3>Vertical vs Horizontal</h3>Verticaal schalen (een grotere server) heeft een limiet. Daarom schalen we <strong>Horizontaal</strong>. We voegen meer 'functions' toe aan de cloud. Door onze stateless opbouw kunnen we oneindig groeien. We gebruiken <em>Load Balancing</em> om het verkeer netjes te verdelen over alle actieve nodes in het Vercel-netwerk."
+    },
+    {
+      "id": 11,
+      "slug": "vibe-coding-future",
+      "title": "Vibe Coding: Regie over de AI-revolutie",
+      "category": "Trend",
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800",
+      "content": "Vibe Coding is de nieuwe standaard. De developer is niet langer een 'typenaar', maar een <strong>architect van intentie</strong>.<br><br>Je geeft AI de richting aan, maar jij controleert de resultaten op basis van je HBO-kennis. Je beoordeelt de architectuur, je checkt de security en je bewaakt de 'vibe' van het project. Dit stelt je in staat om tien keer sneller te bouwen zonder kwaliteit te verliezen."
     }
   ]
 }
